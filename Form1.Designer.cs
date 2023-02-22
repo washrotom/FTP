@@ -29,30 +29,30 @@ namespace FTP
         /// </summary>
         private void InitializeComponent()
         {
-            this.addr = new System.Windows.Forms.TextBox();
-            this.user = new System.Windows.Forms.TextBox();
+            this.addr_box = new System.Windows.Forms.TextBox();
+            this.user_box = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.pwd = new System.Windows.Forms.TextBox();
-            this.port = new System.Windows.Forms.TextBox();
+            this.pwd_box = new System.Windows.Forms.TextBox();
+            this.port_box = new System.Windows.Forms.TextBox();
             this.label_addr = new System.Windows.Forms.Label();
             this.label_user = new System.Windows.Forms.Label();
             this.label_pwd = new System.Windows.Forms.Label();
             this.label_port = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // addr
+            // addr_box
             // 
-            this.addr.Location = new System.Drawing.Point(153, 51);
-            this.addr.Name = "addr";
-            this.addr.Size = new System.Drawing.Size(125, 27);
-            this.addr.TabIndex = 0;
+            this.addr_box.Location = new System.Drawing.Point(153, 51);
+            this.addr_box.Name = "addr_box";
+            this.addr_box.Size = new System.Drawing.Size(125, 27);
+            this.addr_box.TabIndex = 0;
             // 
-            // user
+            // user_box
             // 
-            this.user.Location = new System.Drawing.Point(153, 110);
-            this.user.Name = "user";
-            this.user.Size = new System.Drawing.Size(125, 27);
-            this.user.TabIndex = 1;
+            this.user_box.Location = new System.Drawing.Point(153, 110);
+            this.user_box.Name = "user_box";
+            this.user_box.Size = new System.Drawing.Size(125, 27);
+            this.user_box.TabIndex = 1;
             // 
             // button1
             // 
@@ -64,19 +64,19 @@ namespace FTP
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // pwd
+            // pwd_box
             // 
-            this.pwd.Location = new System.Drawing.Point(153, 171);
-            this.pwd.Name = "pwd";
-            this.pwd.Size = new System.Drawing.Size(125, 27);
-            this.pwd.TabIndex = 3;
+            this.pwd_box.Location = new System.Drawing.Point(153, 171);
+            this.pwd_box.Name = "pwd_box";
+            this.pwd_box.Size = new System.Drawing.Size(125, 27);
+            this.pwd_box.TabIndex = 3;
             // 
-            // port
+            // port_box
             // 
-            this.port.Location = new System.Drawing.Point(153, 235);
-            this.port.Name = "port";
-            this.port.Size = new System.Drawing.Size(125, 27);
-            this.port.TabIndex = 4;
+            this.port_box.Location = new System.Drawing.Point(153, 235);
+            this.port_box.Name = "port_box";
+            this.port_box.Size = new System.Drawing.Size(125, 27);
+            this.port_box.TabIndex = 4;
             // 
             // label_addr
             // 
@@ -127,11 +127,11 @@ namespace FTP
             this.Controls.Add(this.label_pwd);
             this.Controls.Add(this.label_user);
             this.Controls.Add(this.label_addr);
-            this.Controls.Add(this.port);
-            this.Controls.Add(this.pwd);
+            this.Controls.Add(this.port_box);
+            this.Controls.Add(this.pwd_box);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.user);
-            this.Controls.Add(this.addr);
+            this.Controls.Add(this.user_box);
+            this.Controls.Add(this.addr_box);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -141,11 +141,11 @@ namespace FTP
 
         #endregion
 
-        private System.Windows.Forms.TextBox addr;
-        private System.Windows.Forms.TextBox user;
+        private System.Windows.Forms.TextBox addr_box;
+        private System.Windows.Forms.TextBox user_box;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox pwd;
-        private System.Windows.Forms.TextBox port;
+        private System.Windows.Forms.TextBox pwd_box;
+        private System.Windows.Forms.TextBox port_box;
         private System.Windows.Forms.Label label_addr;
         private System.Windows.Forms.Label label_user;
         private System.Windows.Forms.Label label_pwd;

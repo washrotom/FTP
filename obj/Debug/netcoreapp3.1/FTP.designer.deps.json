@@ -5,32 +5,7 @@
   },
   "compilationOptions": {},
   "targets": {
-    ".NETCoreApp,Version=v3.1": {
-      "DevExpress.Win.Navigation/22.2.3": {
-        "runtime": {
-          "lib/net452/DevExpress.XtraBars.v22.2.dll": {
-            "assemblyVersion": "22.2.3.0",
-            "fileVersion": "22.2.3.0"
-          },
-          "lib/net452/DevExpress.XtraEditors.v22.2.dll": {
-            "assemblyVersion": "22.2.3.0",
-            "fileVersion": "22.2.3.0"
-          },
-          "lib/net452/DevExpress.XtraLayout.v22.2.dll": {
-            "assemblyVersion": "22.2.3.0",
-            "fileVersion": "22.2.3.0"
-          }
-        }
-      }
-    }
+    ".NETCoreApp,Version=v3.1": {}
   },
-  "libraries": {
-    "DevExpress.Win.Navigation/22.2.3": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-sVJfDiBF7g0wwRo9uXqBn4Pp7pXl7ZzTJle6q0mOCeUGcv4Bl8rAiC4NAiu9q9jsIG6Mz1SFTJoXLBKFj+R8Dg==",
-      "path": "devexpress.win.navigation/22.2.3",
-      "hashPath": "devexpress.win.navigation.22.2.3.nupkg.sha512"
-    }
-  }
+  "libraries": {}
 }
