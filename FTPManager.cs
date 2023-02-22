@@ -80,8 +80,67 @@ namespace FTP
         {
             try
             {
-                
+                makeDir(folder);
+
+                FileInfo filelnf = new FileInfo(filename);
+
+                folder = folder.Replace('\\', '/');
+                filename = filename.Replace('\\', '/');
+
+                string url = string.Format(@"FTP://{0}:{1}/{2} {3}", this.ipAddr, this.port, folder, filelnf.Name);
+                FtpWebRequest ftpRequest = (FtpWebRequest)WebRequest.Create(url);
+                ftpRequest.Credentials = new NetworkCredential(userld, pwd);
+
+                ftpRequest.KeepAlive = false;
+                ftpRequest.UseBinary = false;
+                ftpRequest.UsePassive = false;
+
+                ftpRequest.Method = WebRequestMethods.Ftp.UploadFile;
+                ftpRequest.ContentLength = filelnf.Length;
+
+                int buffLength = 2048;
+                byte[] buff = new byte[buffLength];
+                int contentLen;
+
+                using(FileStream fs = filelnf.OpenRead())
+                {
+                    using(Stream strm = ftpRequest.GetRequestStream())
+                    {
+                        contentLen = fs.Read(buff, 0, buffLength);
+
+                        while(contentLen != 0)
+                        {
+                            strm.Write(buff, 0, contentLen);
+                            contentLen = fs.Read(buff, 0, buffLength);
+                        }
+                    }
+
+                    fs.Flush();
+                    fs.Close();
+                }
+
+                if(buff != null)
+                {
+                    Array.Clear(buff, 0, buffLength);
+                    buff = null;
+                }
             }
+
+            catch(Exception ex)
+            {
+                this.LastException = ex;
+
+                System.Reflection.MemberInfo info = System.Reflection.MethodInfo.GetCurrentMethod();
+
+                string id = string.Format("{0},{1}", info.ReflectedType.Name, info.Name);
+
+                if (this.ExceptionEvent != null)
+                    this.ExceptionEvent(id, ex);
+
+                return false;
+            }
+
+            return true;
         }
 
         private void makeDir(string dirName)
