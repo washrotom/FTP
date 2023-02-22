@@ -37,10 +37,6 @@ namespace FTP
 
         static void MainFTP(string addr, string user, string pwd, string port)
         {
-            /*string addr = string.Empty;
-            string user = string.Empty;
-            string pwd = string.Empty;
-            string port = string.Empty;*/
 
             FTPManager manager = new FTPManager();
 

@@ -6,6 +6,8 @@ using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 
+using System.IO;
+
 namespace FTP
 {
     class FTPManager
@@ -66,6 +68,78 @@ namespace FTP
                 return false;
             }
             return true;
+        }
+
+        public bool UpLoad(string folder, string filename)
+        {
+            return UpLoad(folder, filename);
+        }
+
+
+        private bool upload(string folder, string filename)
+        {
+            try
+            {
+                
+            }
+        }
+
+        private void makeDir(string dirName)
+        {
+            string[] arrDir = dirName.Split('\\');
+            string currentDir = string.Empty;
+
+            try
+            {
+                foreach(string tmpFoler in arrDir)
+                {
+                    try
+                    {
+                        if (tmpFoler == string.Empty) continue;
+
+                        currentDir += @"/" + tmpFoler;
+
+                        string url = string.Format(@"FTP://{0}:{1} {2}", this.ipAddr, this.port, currentDir);
+                        FtpWebRequest ftpRequest = (FtpWebRequest)WebRequest.Create(url);
+                        ftpRequest.Credentials = new NetworkCredential(userld, pwd);
+
+                        ftpRequest.Method = WebRequestMethods.Ftp.MakeDirectory;
+                        ftpRequest.KeepAlive = false;
+                        ftpRequest.UsePassive = false;
+
+                        FtpWebResponse response = (FtpWebResponse)ftpRequest.GetResponse();
+
+                        response.Close();
+                    }
+
+                    catch { }
+                }
+            }
+
+            catch(Exception ex)
+            {
+                this.LastException = ex;
+                System.Reflection.MemberInfo info = System.Reflection.MethodInfo.GetCurrentMethod();
+
+                string id = string.Format("{0}.{1}", info.ReflectedType.Name, info.Name);
+
+                if (this.ExceptionEvent != null)
+                    this.ExceptionEvent(id, ex);
+            }
+        }
+
+        private void checkDir(string localFullPathFile)
+        {
+            FileInfo flnfo = new FileInfo(localFullPathFile);
+
+            if (!flnfo.Exists)
+            {
+                DirectoryInfo dlnfo = new DirectoryInfo(flnfo.DirectoryName);
+                if (!dlnfo.Exists)
+                {
+                    dlnfo.Create();
+                }
+            }
         }
     }
 }
