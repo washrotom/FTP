@@ -1,56 +1,11 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.1": {
-      "DevExpress.Win.Navigation/22.2.3": {
-        "type": "package",
-        "compile": {
-          "lib/net452/DevExpress.XtraBars.v22.2.dll": {},
-          "lib/net452/DevExpress.XtraEditors.v22.2.dll": {},
-          "lib/net452/DevExpress.XtraLayout.v22.2.dll": {}
-        },
-        "runtime": {
-          "lib/net452/DevExpress.XtraBars.v22.2.dll": {},
-          "lib/net452/DevExpress.XtraEditors.v22.2.dll": {},
-          "lib/net452/DevExpress.XtraLayout.v22.2.dll": {}
-        }
-      }
-    }
+    ".NETCoreApp,Version=v3.1": {}
   },
-  "libraries": {
-    "DevExpress.Win.Navigation/22.2.3": {
-      "sha512": "sVJfDiBF7g0wwRo9uXqBn4Pp7pXl7ZzTJle6q0mOCeUGcv4Bl8rAiC4NAiu9q9jsIG6Mz1SFTJoXLBKFj+R8Dg==",
-      "type": "package",
-      "path": "devexpress.win.navigation/22.2.3",
-      "hasTools": true,
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "devexpress.win.navigation.22.2.3.nupkg.sha512",
-        "devexpress.win.navigation.nuspec",
-        "lib/net452/Design/WinForms/Server/DevExpress.XtraBars.v22.2.Design.dll",
-        "lib/net452/Design/WinForms/Server/DevExpress.XtraEditors.v22.2.Design.dll",
-        "lib/net452/Design/WinForms/Server/DevExpress.XtraLayout.v22.2.Design.dll",
-        "lib/net452/DevExpress.XtraBars.v22.2.dll",
-        "lib/net452/DevExpress.XtraBars.v22.2.xml",
-        "lib/net452/DevExpress.XtraEditors.v22.2.dll",
-        "lib/net452/DevExpress.XtraEditors.v22.2.xml",
-        "lib/net452/DevExpress.XtraLayout.v22.2.dll",
-        "lib/net452/DevExpress.XtraLayout.v22.2.xml",
-        "lib/net6.0-windows/DevExpress.XtraBars.v22.2.dll",
-        "lib/net6.0-windows/DevExpress.XtraBars.v22.2.xml",
-        "lib/net6.0-windows/DevExpress.XtraEditors.v22.2.dll",
-        "lib/net6.0-windows/DevExpress.XtraEditors.v22.2.xml",
-        "lib/net6.0-windows/DevExpress.XtraLayout.v22.2.dll",
-        "lib/net6.0-windows/DevExpress.XtraLayout.v22.2.xml",
-        "tools/VisualStudioToolsManifest.xml"
-      ]
-    }
-  },
+  "libraries": {},
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.1": [
-      "devexpress.win.navigation >= 22.2.3"
-    ]
+    ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
     "C:\\Users\\h_ul\\.nuget\\packages\\": {},
@@ -102,12 +57,6 @@
     "frameworks": {
       "netcoreapp3.1": {
         "targetAlias": "netcoreapp3.1",
-        "dependencies": {
-          "devexpress.win.navigation": {
-            "target": "Package",
-            "version": "[22.2.3, )"
-          }
-        },
         "imports": [
           "net461",
           "net462",
@@ -129,17 +78,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.416\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "프로젝트 대상 프레임워크 '.NETCoreApp,Version=v3.1' 대신 '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8'을(를) 사용하여 패키지 'DevExpress.Win.Navigation 22.2.3'을(를) 복원했습니다. 이 패키지는 프로젝트와 완벽하게 호환되지 않을 수 있습니다.",
-      "libraryId": "DevExpress.Win.Navigation",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
-      ]
-    }
-  ]
+  }
 }

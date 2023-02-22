@@ -18,7 +18,4 @@
   <PropertyGroup>
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <PkgDevExpress_Win_Navigation Condition=" '$(PkgDevExpress_Win_Navigation)' == '' ">C:\Program Files\DevExpress 22.2\Components\Offline Packages\devexpress.win.navigation\22.2.3</PkgDevExpress_Win_Navigation>
-  </PropertyGroup>
 </Project>
