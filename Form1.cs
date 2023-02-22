@@ -24,23 +24,27 @@ namespace FTP
             string user = string.Empty;
             string pwd = string.Empty;
             string port = string.Empty;
+            string path = string.Empty;
+            string localPath = string.Empty;
 
             addr = string.Format("{0}", addr_box.Text);
             user = string.Format("{0}", user_box.Text);
             pwd = string.Format("{0}", pwd_box.Text);
             port = string.Format("{0}", port_box.Text);
+            path = string.Format("{0}", path_box.Text);
 
-            MainFTP(addr, user, pwd, port);
+            MainFTP(addr, user, pwd, port, path);
 
         }
 
 
-        static void MainFTP(string addr, string user, string pwd, string port)
+        static void MainFTP(string addr, string user, string pwd, string port, string path)
         {
 
             FTPManager manager = new FTPManager();
 
             bool result = manager.ConnectToServer(addr, port, user, pwd);
+            
 
             if (result == true)
             {

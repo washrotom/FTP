@@ -38,6 +38,8 @@ namespace FTP
             this.label_user = new System.Windows.Forms.Label();
             this.label_pwd = new System.Windows.Forms.Label();
             this.label_port = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.path_box = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // addr_box
@@ -118,11 +120,30 @@ namespace FTP
             this.label_port.TabIndex = 8;
             this.label_port.Text = "port";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(63, 302);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(51, 25);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "path";
+            // 
+            // path_box
+            // 
+            this.path_box.Location = new System.Drawing.Point(153, 304);
+            this.path_box.Name = "path_box";
+            this.path_box.Size = new System.Drawing.Size(125, 27);
+            this.path_box.TabIndex = 10;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.path_box);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.label_port);
             this.Controls.Add(this.label_pwd);
             this.Controls.Add(this.label_user);
@@ -150,6 +171,8 @@ namespace FTP
         private System.Windows.Forms.Label label_user;
         private System.Windows.Forms.Label label_pwd;
         private System.Windows.Forms.Label label_port;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox path_box;
     }
 }
 
