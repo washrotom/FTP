@@ -36,7 +36,7 @@ namespace FTP
             this.userld = userld;
             this.pwd = pwd;
 
-            string url = string.Format(@"FTP://{0}:{1}", this.ipAddr, this.port);
+            string url = string.Format(@"FTP://{0}:{1}/", this.ipAddr, this.port);
 
             try
             {

@@ -25,10 +25,10 @@ namespace FTP
             string pwd = string.Empty;
             string port = string.Empty;
 
-            addr = Convert.ToString(label_addr);
-            user = Convert.ToString(label_user);
-            pwd = Convert.ToString(label_pwd);
-            port = Convert.ToString(label_port);
+            addr = string.Format("{0}", label_addr.Text);
+            user = string.Format("{0}", label_user.Text);
+            pwd = string.Format("{0}", label_pwd.Text);
+            port = string.Format("{0}", label_port.Text);
 
             MainFTP(addr, user, pwd, port);
 
