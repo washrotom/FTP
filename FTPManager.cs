@@ -87,7 +87,7 @@ namespace FTP
                 folder = folder.Replace('\\', '/');
                 filename = filename.Replace('\\', '/');
 
-                string url = string.Format(@"FTP://{0}:{1}/{2} {3}", this.ipAddr, this.port, folder, filelnf.Name);
+                string url = string.Format(@"FTP://{0}:{1}/{2}/{3}", this.ipAddr, this.port, folder, filelnf.Name);
                 FtpWebRequest ftpRequest = (FtpWebRequest)WebRequest.Create(url);
                 ftpRequest.Credentials = new NetworkCredential(userld, pwd);
 
