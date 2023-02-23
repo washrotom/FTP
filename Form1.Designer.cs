@@ -40,6 +40,8 @@ namespace FTP
             this.label_port = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.path_box = new System.Windows.Forms.TextBox();
+            this.filename_box = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // addr_box
@@ -137,11 +139,30 @@ namespace FTP
             this.path_box.Size = new System.Drawing.Size(125, 27);
             this.path_box.TabIndex = 10;
             // 
+            // filename_box
+            // 
+            this.filename_box.Location = new System.Drawing.Point(440, 304);
+            this.filename_box.Name = "filename_box";
+            this.filename_box.Size = new System.Drawing.Size(125, 27);
+            this.filename_box.TabIndex = 11;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("맑은 고딕", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(325, 306);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(90, 25);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "fileName";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.filename_box);
             this.Controls.Add(this.path_box);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label_port);
@@ -173,6 +194,8 @@ namespace FTP
         private System.Windows.Forms.Label label_port;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox path_box;
+        private System.Windows.Forms.TextBox filename_box;
+        private System.Windows.Forms.Label label2;
     }
 }
 

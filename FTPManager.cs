@@ -72,7 +72,7 @@ namespace FTP
 
         public bool UpLoad(string folder, string filename)
         {
-            return UpLoad(folder, filename);
+            return upload(folder, filename);
         }
 
 
